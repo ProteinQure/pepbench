@@ -27,6 +27,19 @@ Files are plain `ATOM` records with a placeholder `CRYST1` line, no hydrogens an
 target superpose to within a few tenths of an Å but are not pre-aligned to a common
 frame.
 
+## Quick use
+
+1. Select a template from `templates/<TARGET>/len<L>/`.
+2. Give the two-chain PDB to an inverse-folding method: design residues for chain A
+   while using chain B as the fixed receptor context.
+3. Refold the designed peptide–receptor complex.
+4. Assess target-aligned peptide self-consistency RMSD: align the predicted and
+   intended complexes on chain B, then calculate chain A backbone RMSD without a
+   second alignment on chain A.
+
+Chain A is a backbone-only poly-glycine placeholder, so PepBench is not appropriate
+for sequence-recovery evaluation.
+
 ## Targets
 
 Twelve targets spanning a diverse set of protein families, each taken from a solved
