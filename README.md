@@ -32,7 +32,8 @@ frame.
 1. Select a template from `templates/<TARGET>/len<L>/`.
 2. Give the two-chain PDB to an inverse-folding method: design residues for chain A
    while using chain B as the fixed receptor context.
-3. Refold the designed peptide–receptor complex.
+3. Refold the designed peptide–receptor complex with your structure predictor of
+   choice (e.g., Boltz-2 or OpenDDE).
 4. Assess target-aligned peptide self-consistency RMSD: align the predicted and
    intended complexes on chain B, then calculate chain A backbone RMSD without a
    second alignment on chain A.
