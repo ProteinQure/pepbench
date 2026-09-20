@@ -55,7 +55,7 @@ length was fixed per run. This produced on the order of 10³ candidate backbones
 
 **Hotspots.** Binding-site residues were assigned per target by an automated literature-and-precedent pipeline that resolves the UniProt accession, retrieves related PDB structures and their literature, and scores every receptor residue by how much precedent supports it as a contact. Filtered sets were compared against the contacts made by the peptide in the original complex as a sanity check on site placement.
 
-**Selection.** Candidates were clustered and filtered down to the 10 per length:target pair released here, giving 353 structures-- 10 per pair except those that did not reach 10 disctinct clusters (len08:1FGL with 7 and len16:7OUN with 6)
+**Selection.** Candidates were clustered and filtered down to the 10 per length:target pair released here, giving 353 structures — 10 per pair except those that did not reach 10 distinct clusters (len08:1FGL with 7 and len16:7OUN with 6).
 
 ## Leakage
 
@@ -64,7 +64,7 @@ The receptors are real proteins, so a model evaluated on PepBench may have seen 
 ## Intended use
 
 Design sequences for chain A conditioned on chain B, then assess them by refolding the designed complex and measuring target-aligned peptide self-consistency RMSD: superpose predicted and intended complexes on the target alone, then measure peptide backbone
-RMSD without a second alignment on the peptide. That reports consistency of both the peptide backbone and its pose relative to the target, rather than peptide shape in isolation -- the standard design–refold self-consistency principle, adapted to peptide–protein complexes.
+RMSD without a second alignment on the peptide. That reports consistency of both the peptide backbone and its pose relative to the target, rather than peptide shape in isolation — the standard design–refold self-consistency principle, adapted to peptide–protein complexes.
 
 ## Citation
 
