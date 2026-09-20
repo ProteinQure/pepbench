@@ -1,5 +1,8 @@
 # PepBench
 
+[![License](https://img.shields.io/github/license/ProteinQure/pepbench?label=license)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/ProteinQure/pepbench?display_name=tag&sort=semver)](https://github.com/ProteinQure/pepbench/releases)
+
 PepBench is a set of *de novo* designed peptide binder backbones against 12 protein
 targets, built to decouple sequence recovery from design-success metrics. Because the
 binders are generated rather than observed, there is no native sequence to recover:
