@@ -83,7 +83,7 @@ give different numbers. This section records the evaluation behind the PepBench 
 in the AtomWeaver preprint, in enough detail to reproduce them.
 
 **Refolding.** The whole complex was refolded: the structure predictor received the
-designed peptide sequence and the target protein (receptor) sequence and predicted both chains. We used [OpenDDE](https://github.com/aurekaresearch/OpenDDE) as the structure predictor. 
+designed peptide sequence, the target protein (receptor) sequence, and the target MSA. The structures of both chains were then predicted. We used [OpenDDE](https://github.com/aurekaresearch/OpenDDE) as the structure predictor.
 
 **Superposition.** Each predicted complex was superposed onto its template on the
 backbone atoms (`N`, `CA`, `C`, `O`) of the receptor chain, over all receptor residues —
