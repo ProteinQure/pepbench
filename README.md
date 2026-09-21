@@ -41,8 +41,10 @@ frame.
    intended complexes on chain B, then calculate chain A backbone RMSD without a
    second alignment on chain A.
 
-Chain A is a backbone-only poly-glycine placeholder, so PepBench is not appropriate
-for sequence-recovery evaluation.
+Aligning on the target alone means scRMSD reports consistency of both the peptide
+backbone and its pose relative to the target, rather than peptide shape in isolation.
+This is the standard design–refold self-consistency principle, adapted to
+peptide–protein complexes.
 
 ## Targets
 
@@ -74,14 +76,24 @@ length was fixed per run. This produced on the order of 10³ candidate backbones
 
 **Selection.** Candidates were clustered and filtered down to the 10 per length:target pair released here, giving 353 structures — 10 per pair except those that did not reach 10 distinct clusters (len08:1FGL with 7 and len16:7OUN with 6).
 
-## Leakage
+## Scope and limitations
 
-The receptors are real proteins, so a model evaluated on PepBench may have seen close homologues in training. The peptide backbones are generated and have no native counterpart, but a strong result on a given target should still be read with the receptor's training overlap in mind.
+**PepBench measures self-consistency, not affinity.** A design that refolds to the
+intended backbone and pose is self-consistent with the template it was designed for.
+The set carries no binding data, and no experimental validation, so scRMSD pass rates should not be reported as hit rates or compared against measured affinities.
 
-## Intended use
+**There are no peptide sequences, by construction.** The backbones are de novo
+generated. Chain A is a poly-glycine placeholder carrying only backbone atoms. Sequence-recovery metrics are therefore undefined on PepBench.
 
-Design sequences for chain A conditioned on chain B, then assess them by refolding the designed complex and measuring target-aligned peptide self-consistency RMSD: superpose predicted and intended complexes on the target alone, then measure peptide backbone
-RMSD without a second alignment on the peptide. That reports consistency of both the peptide backbone and its pose relative to the target, rather than peptide shape in isolation — the standard design–refold self-consistency principle, adapted to peptide–protein complexes.
+**The receptors are real proteins and may overlap your training data.** Each receptor
+is taken from a solved complex, so a model may have seen it or a close homologue
+during training. The peptide backbones have no such counterpart, but a strong result
+on a given target should be read with that target's training overlap in mind. Overlap
+is specific to each model's corpus and is worth measuring against your own.
+
+**Report results stratified by target and length.** Pooled results hide axes that was
+built to vary: target difficulty and peptide length. We strongly recommend against 
+pooling the results into a single statistic, as it is expected to be noisy.
 
 ## Citation
 
