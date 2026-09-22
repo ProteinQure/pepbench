@@ -90,7 +90,7 @@ backbone atoms (`N`, `CA`, `C`, `O`) of the receptor chain, over all receptor re
 not Cα alone, not all heavy atoms, and not an interface subset. The template was held
 fixed and the prediction was the mobile structure.
 
-**scRMSD.** The receptor-derived rotation and translation was applied to the predicted peptide, and scRMSD is the peptide backbone self-consistency RMSD (`N`, `CA`, `C`, `O`) against the template peptide, with no second alignment on the peptide. Sidechains never enter the number, so *canonical and
+**scRMSD.** The receptor-derived rotation and translation were applied to the predicted peptide, and scRMSD is the peptide backbone self-consistency RMSD (`N`, `CA`, `C`, `O`) against the template peptide, with no second alignment on the peptide. Sidechains never enter the number, so *canonical and
 non-canonical designs are scored on the same footing*.
 
 **Residue correspondence.** Residues were matched by position along the chain rather
@@ -135,7 +135,7 @@ on a given target should be read with that target's training overlap in mind. Ov
 is specific to each model's corpus and is worth measuring against your own.
 
 **Report results stratified by target and length.** Pooled results hide axes that was
-built to vary: target difficulty and peptide length. We strongly recommend against 
+built to vary along: target difficulty and peptide length. We strongly recommend against 
 pooling the results into a single statistic, as it is expected to be noisy.
 
 ## Citation
@@ -145,11 +145,13 @@ PepBench was introduced in the AtomWeaver preprint:
 ```bibtex
 @article{kitaygorodsky2026atomweaver,
   author    = {Kitaygorodsky, Alexander and Hostallero, David Earl and
-               Butterfoss, Glenn L. and Broom, Aron and Fingerhuth, Mark},
+               Broom, Aron and Layne, Elliot and Hwang, Sungwon and
+               Kanawaty, Ashlin K. and Babej, Tomáš and
+               Butterfoss, Glenn L. and Fingerhuth, Mark},
   title     = {{AtomWeaver}: Multi-Component Flow Matching with a Structured
                Geometric Prior Facilitates Non-Canonical Peptide Design},
   journal   = {bioRxiv},
   year      = {2026},
-  publisher = {Cold Spring Harbor Laboratory}
+  publisher = {openRxiv}
 }
 ```
