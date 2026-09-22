@@ -1,6 +1,6 @@
 # PepBench
 
-[![DOI](https://zenodo.org/badge/1366623770.svg)](https://doi.org/10.5281/zenodo.22902796)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22902796-1682D4)](https://doi.org/10.5281/zenodo.22902796)
 [![License](https://img.shields.io/github/license/ProteinQure/pepbench?label=license)](LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/ProteinQure/pepbench?display_name=tag&sort=semver)](https://github.com/ProteinQure/pepbench/releases)
 
