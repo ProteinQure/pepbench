@@ -141,10 +141,24 @@ pooling the results into a single statistic, as it is expected to be noisy.
 
 ## Citation
 
+To cite only PeptideArena itself:
+
+```bibtex
+@software{proteinqure2026peptidearena,
+  author    = {Hostallero, David E. and Butterfoss, Glenn and Broom, Aron and Hwang, Sungwon and Layne, Elliot and Kanawaty, Ashlin and Kitaygorodsky, Alexander and Fingerhuth, Mark},
+  title     = {{PeptideArena v1.0.0: De-Novo Peptide Inverse Folding}},
+  version   = {v1.0.0},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22922294},
+  url       = {https://doi.org/10.5281/zenodo.22922294}
+}
+```
+
 PeptideArena was introduced in the AtomWeaver preprint:
 
 ```bibtex
-@article{kitaygorodsky2026atomweaver,
+@article{proteinqure2026atomweaver,
   author    = {Kitaygorodsky, Alexander and Hostallero, David Earl and
                Broom, Aron and Layne, Elliot and Hwang, Sungwon and
                Kanawaty, Ashlin K. and Babej, Tomáš and
