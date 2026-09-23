@@ -1,10 +1,10 @@
-# PepBench
+# PeptideArena
 
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22902796-1682D4)](https://doi.org/10.5281/zenodo.22902796)
-[![License](https://img.shields.io/github/license/ProteinQure/pepbench?label=license)](LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/ProteinQure/pepbench?display_name=tag&sort=semver)](https://github.com/ProteinQure/pepbench/releases)
+[![License](https://img.shields.io/github/license/ProteinQure/peptidearena?label=license)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/ProteinQure/peptidearena?display_name=tag&sort=semver)](https://github.com/ProteinQure/peptidearena/releases)
 
-PepBench is a set of *de novo* designed peptide binder backbones against 12 protein
+PeptideArena is a set of *de novo* designed peptide binder backbones against 12 protein
 targets, built to decouple sequence recovery from design-success metrics. Because the
 binders are generated rather than observed, there is no native sequence to recover:
 sequence-recovery numbers are undefined here, and evaluation relies on structural
@@ -80,7 +80,7 @@ length was fixed per run. This produced on the order of 10³ candidate backbones
 ## Evaluation
 
 The steps in [Quick use](#quick-use) leave several choices open, and different choices
-give different numbers. This section records the evaluation behind the PepBench results
+give different numbers. This section records the evaluation behind the PeptideArena results
 in the AtomWeaver preprint, in enough detail to reproduce them.
 
 **Refolding.** The whole complex was refolded: the structure predictor received the
@@ -122,12 +122,12 @@ deduplication of identical sequences, which changes what a count is counting.
 
 ## Scope and limitations
 
-**PepBench measures self-consistency, not affinity.** A design that refolds to the
+**PeptideArena measures self-consistency, not affinity.** A design that refolds to the
 intended backbone and pose is self-consistent with the template it was designed for.
 The set carries no binding data, and no experimental validation, so scRMSD pass rates should not be reported as hit rates or compared against measured affinities.
 
 **There are no peptide sequences, by construction.** The backbones are de novo
-generated. Chain A is a poly-glycine placeholder carrying only backbone atoms. Sequence-recovery metrics are therefore undefined on PepBench.
+generated. Chain A is a poly-glycine placeholder carrying only backbone atoms. Sequence-recovery metrics are therefore undefined on PeptideArena.
 
 **The receptors are real proteins and may overlap your training data.** Each receptor
 is taken from a solved complex, so a model may have seen it or a close homologue
@@ -141,7 +141,7 @@ pooling the results into a single statistic, as it is expected to be noisy.
 
 ## Citation
 
-PepBench was introduced in the AtomWeaver preprint:
+PeptideArena was introduced in the AtomWeaver preprint:
 
 ```bibtex
 @article{kitaygorodsky2026atomweaver,
